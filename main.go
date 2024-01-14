@@ -2,16 +2,16 @@ package main
 
 import (
 	"fmt"
-	"io"
+	"html/template"
 	"log"
 	"net/http"
 )
 
 func main() {
-	fmt.Println("hello world")
+	fmt.Println("Running Server... \nAt port http://localhost:8000")
 	handle1 := func(w http.ResponseWriter, r *http.Request) {
-		io.WriteString(w, "Hello World")
-		io.WriteString(w, r.Method)
+		tmpl := template.Must(template.ParseFiles("index.html"))
+		tmpl.Execute(w, nil)
 	}
 
 	http.HandleFunc("/", handle1)

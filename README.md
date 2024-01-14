@@ -1,6 +1,6 @@
 # Go Messenger Example | Farno
 
-This is a simple messenger application written in Go with HTMX, inspired by the talk by [BugBytes](https://www.youtube.com/@bugbytes3923) in the live stream on [YouTube](https://www.youtube.com/watch?v=F9H6vYelYyU). I've incorporated some enhancements, including the layout, while retaining the core concepts presented in the video.
+This is a simple webserver application written in Go with HTMX, inspired by the talk by [BugBytes](https://www.youtube.com/@bugbytes3923) in the video on [YouTube](https://www.youtube.com/watch?v=F9H6vYelYyU). I've incorporated some enhancements, including the layout, while retaining the core concepts presented in the video.
 
 I use:
 
