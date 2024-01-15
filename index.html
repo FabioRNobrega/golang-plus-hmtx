@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sci-fy</title>
 </head>
 <body>
-    <h1> Hello world!</h1> 
+    <h1> Top 20 Sci-fy movies:</h1>
+    
+    {{ range .Films }}
+
+    <div class="card">
+        <h2>{{ .Title }}</h2>
+        <p><strong>Director:</strong> {{ .Director }}</p>
+        <p><strong>Plot:</strong> {{ .Plot }}</p>
+    </div>
+    {{ end }}
 </body>
 </html>
