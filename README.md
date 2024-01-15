@@ -5,12 +5,17 @@ This is a simple webserver application written in Go with HTMX, inspired by the 
 I use:
 
 - Go version 1.21.6
+- HTMLX 
+- CSS
+
+Result: 
+
+![result gif](result.gif)
 
 ## Table of Contents
 
 - [Install](#install)
 - [Usage](#usage)
-- [Tests](#tests)
 - [Git Guideline](#git-guideline)
 
 ## Install
@@ -23,24 +28,11 @@ To run this application, you need to have Go installed. You can follow the [Go I
 Clone this repository and navigate into it. Install dependencies with the following command:
 
 ```bash
-go get -u ./...
-```
-
-Start the Go application by running:
-
-```bash
 go run ./main.go
 ```
 
-Now you can visit localhost:3000 from your browser.
+Now you can visit localhost:8000 from your browser.
 
-## Tests
-
-Tests are written using the Go testing framework and can be found in the tests folder. To run the tests, use:
-
-```bash
-go test ./...
-```
 
 ## Git Guideline
 

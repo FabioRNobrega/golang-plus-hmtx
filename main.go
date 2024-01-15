@@ -44,6 +44,21 @@ func main() {
 		tmpl.Execute(w, films)
 	}
 
+	handle2 := func(w http.ResponseWriter, r *http.Request) {
+		log.Print("HTMX request received")
+		log.Print(r.Header.Get("HX-Request"))
+
+		title := r.PostFormValue("title")
+		director := r.PostFormValue("director")
+		plot := r.PostFormValue("plot")
+		tmpl := template.Must(template.ParseFiles("index.html"))
+		tmpl.ExecuteTemplate(w, "film-card-element", Film{Title: title, Director: director, Plot: plot})
+	}
+
+	/* routers */
 	http.HandleFunc("/", handle1)
+	http.HandleFunc("/add-film/", handle2)
+
+	/* web server error handler */
 	log.Fatal(http.ListenAndServe(":8000", nil))
 }
